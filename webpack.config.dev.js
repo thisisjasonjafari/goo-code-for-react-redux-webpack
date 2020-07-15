@@ -14,6 +14,7 @@ module.exports = {
         publicPath: "/",
         filename: "bundle.js",
     },
+
     devServer: {
         stats: "minimal",
         overlay: true,
@@ -30,7 +31,7 @@ module.exports = {
     ],
     module: {
         rules: [{
-                test: /\.(js|jsx)$/,
+                test: /\.(jsx|js)$/,
                 exclude: /node_modules/,
                 use: ["babel-loader", "eslint-loader"],
             },
