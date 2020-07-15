@@ -4,7 +4,7 @@ import HomePage from "./home/Home.jsx";
 import AboutPage from "./about/About.jsx";
 import Header from "./common/Header.jsx";
 import PageNotFound from "./PageNotFound.jsx";
-
+import CoursesPage from "./courses/CoursesPage.jsx";
 
 const App = () => {
     return (
@@ -15,10 +15,8 @@ const App = () => {
                     exact path="/"
                     component={HomePage}
                 />
-                <Route
-                    path="/about"
-                    component={AboutPage}
-                />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/courses" component={CoursesPage} />
                 <Route component={PageNotFound} />
             </Switch>
         </div>
