@@ -22,4 +22,17 @@ module.exports = {
         headers: { "Access-Control-Allow-Origin": "*" },
         https: false,
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "src/index.html",
+            favicon: "src/favicon.ico",
+        }),
+    ],
+    module: {
+        rules: [{
+            test: /\.(js|jsx)$/,
+            exclude: /node_modules/,
+            use: ["style-loader", "css-loader"],
+        }, ],
+    },
 };
